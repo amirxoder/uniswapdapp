@@ -1,0 +1,130 @@
+.navbar {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.navbar_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Left */
+
+.navbar_box_left {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.navbar_box_left_img_logo {
+  font-size: 2rem;
+}
+
+.navbar_box_left_menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar_box_left_menu_item {
+  font-size: 1.2rem;
+}
+
+/* Middel */
+
+.navbar_box_middle {
+  background-color: #1e1e1e62;
+  position: relative;
+  border-radius: 2rem;
+  backdrop-filter: blur(3px);
+}
+.navbar_box_middle input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: #cff80c;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.navbar_box_middle input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar_box_middle_search_icon {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* right */
+
+.navbar_box_right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar_box_right_box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1e1e1e;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #cff80c;
+}
+
+.navbar_box_right_box p {
+  font-size: 1.2rem;
+  line-height: 0;
+  color: #cff80c;
+}
+
+.navbar_box_right button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 34em) {
+  .navbar {
+    width: 90%;
+  }
+  .navbar_box {
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .navbar_box_middle {
+    display: none;
+  }
+
+  .navbar_box_left_menu{
+    display:none;
+  }
+
+  .navbar_box_right_box {
+    display: none;
+  }
+  .navbar_box_left_img_logo{
+    font-size: 3.2rem;
+  }
+}
