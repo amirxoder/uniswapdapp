@@ -18,7 +18,11 @@ const Navbar = () => {
   ];
 
   const [openModel, setOpenModel] = useState(false);
-  const [openTokenBox, setOpenTokenBox] = useState(false);
+  const [openTokenBox, setOpenTokenBox] = useState(true);
+
+  const showTokenBoxHandler = () => {
+    setOpenTokenBox((prev) => !prev);
+  };
 
   return (
     <div className={style.navbar}>
@@ -54,14 +58,17 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className={style.navbar_box_right}>
-          <div className={style.navbar_box_right_box}>
+          <div
+            className={style.navbar_box_right_box}
+            onClick={() => showTokenBoxHandler()}
+          >
             <div className={style.navbar_box_right_box_img}>
               <FaEthereum />
             </div>
             <p>Network Name</p>
           </div>
 
-          <button onClick={() =>setOpenModel(true)}>Address</button>
+          <button onClick={() => setOpenModel(true)}>Address</button>
 
           {openModel && (
             <Model
@@ -73,9 +80,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      {openTokenBox && (
-        <TokenList tokenData="he" setOpenTokenBox={setOpenTokenBox} />
-      )}
+      <TokenList
+        tokenData="he"
+        setOpenTokenBox={setOpenTokenBox}
+        openTokenBox={openTokenBox}
+      />
     </div>
   );
 };

@@ -31,6 +31,10 @@
 
 .navbar_box_left_menu_item {
   font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.navbar_box_left_menu_item:hover {
+  color: #cff80c;
 }
 
 /* Middel */
@@ -117,14 +121,14 @@
     display: none;
   }
 
-  .navbar_box_left_menu{
-    display:none;
+  .navbar_box_left_menu {
+    display: none;
   }
 
   .navbar_box_right_box {
     display: none;
   }
-  .navbar_box_left_img_logo{
+  .navbar_box_left_img_logo {
     font-size: 3.2rem;
   }
 }
