@@ -1,12 +1,11 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect, useContext } from "react";
+
+import { HeroSection } from "../Components";
 
 const Home = () => {
-
-
   return (
     <div>
-      <div  />
-      Home
+      <HeroSection accounts='hey' tokenData = 'data'/>
     </div>
   );
 };

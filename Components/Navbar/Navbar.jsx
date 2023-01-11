@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   const [openModel, setOpenModel] = useState(false);
-  const [openTokenBox, setOpenTokenBox] = useState(true);
+  const [openTokenBox, setOpenTokenBox] = useState(false);
 
   const showTokenBoxHandler = () => {
     setOpenTokenBox((prev) => !prev);

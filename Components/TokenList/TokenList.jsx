@@ -6,7 +6,6 @@ import style from "./TokenList.module.css";
 
 const TokenList = ({ tokenData, setOpenTokenBox, openTokenBox }) => {
   const data = [1, 2, 3, 4, 5, 6, 7];
-  console.log(openTokenBox);
 
   return (
     <div className={openTokenBox ? `${style.tokenList} ${style.show}` : `${style.tokenList} ${style.hide}`}>
