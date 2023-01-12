@@ -3,8 +3,9 @@ import { GrFormClose } from "react-icons/gr";
 
 import { Token, SearchToken } from "../";
 import { FaEthereum } from "react-icons/fa";
-import {BsFillGearFill} from 'react-icons/bs'
+import { BsFillGearFill } from "react-icons/bs";
 import style from "./HeroSection.module.css";
+
 
 const HeroSection = ({ accounts, tokenData }) => {
   const [openSetting, setOpenSetting] = useState(false);
@@ -62,7 +63,9 @@ const HeroSection = ({ accounts, tokenData }) => {
         )}
       </div>
 
-      {openSetting && <Token openSetting={openSetting} />}
+      {openSetting && (
+        <Token openSetting={openSetting} setOpenSetting={setOpenSetting} />
+      )}
       {openToken && (
         <SearchToken
           openToken={setOpenToken}
