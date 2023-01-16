@@ -6,7 +6,6 @@ import { FaEthereum } from "react-icons/fa";
 import { BsFillGearFill } from "react-icons/bs";
 import style from "./HeroSection.module.css";
 
-
 const HeroSection = ({ accounts, tokenData }) => {
   const [openSetting, setOpenSetting] = useState(false);
   const [openToken, setOpenToken] = useState(false);
@@ -40,7 +39,7 @@ const HeroSection = ({ accounts, tokenData }) => {
         </div>
         <div className={style.heroSection_box_input}>
           <input type="text" placeholder="0" />
-          <button onClick={() => openToken(true)}>
+          <button onClick={() => setOpenToken(true)}>
             {tokenOne.img || <FaEthereum />}
             {tokenOne.name || "ETH"}
             <small>9474</small>
@@ -49,7 +48,7 @@ const HeroSection = ({ accounts, tokenData }) => {
 
         <div className={style.heroSection_box_input}>
           <input type="text" placeholder="0" />
-          <button onClick={() => openToken(true)}>
+          <button onClick={() => setOpenTokenTwo(true)}>
             {tokenTwo.img || <FaEthereum />}
             {tokenTwo.name || "ETH"}
             <small>9474</small>
@@ -73,7 +72,7 @@ const HeroSection = ({ accounts, tokenData }) => {
           tokenData={tokenData}
         />
       )}
-      {openToken && (
+      {openTokenTwo && (
         <SearchToken
           openToken={setOpenTokenTwo}
           tokens={setTokenTwo}
