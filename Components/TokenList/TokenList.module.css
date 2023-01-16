@@ -1,12 +1,15 @@
 .tokenList {
   position: absolute;
+  right: 5rem;
+  top: 4rem;
   width: 20rem;
   border-radius: 0.5rem;
-  background-color: #1e1e1e32;
+  background-color: #0000008c;
   margin-top: 2rem;
   margin-left: 66rem;
   padding: 1rem;
   backdrop-filter: blur(5px);
+  z-index: 99;
 }
 
 .tokenList_title {
@@ -21,22 +24,20 @@
 }
 
 .tokenList_close {
+}
+
+.tokenList_close_icon {
+  font-size: 1.3rem;
+  background-color: #cff80c;
   position: absolute;
   right: 1rem;
   cursor: pointer;
   top: 1rem;
-  width: 2rem;
-  height: 2rem;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-}
-
-.tokenList_close_icon {
-  color: red;
-  font-size: 1.3rem;
 }
 
 .tokenList_box {
@@ -71,6 +72,7 @@
   .tokenList {
     margin-left: 0;
     width: 90%;
+    right: 1rem;
   }
 }
 
@@ -85,10 +87,13 @@
   0% {
     opacity: 0;
     transform: translateY(30px);
+    display: none;
+
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
+    display: block;
   }
 }
 
@@ -96,9 +101,12 @@
   0% {
     opacity: 1;
     transform: translateY(0px);
+    display: block;
   }
   100% {
     opacity: 0;
     transform: translateY(30px);
+    display: none;
+    z-index: -99;
   }
 }

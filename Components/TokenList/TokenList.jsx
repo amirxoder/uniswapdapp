@@ -4,17 +4,26 @@ import { GrFormClose } from "react-icons/gr";
 // INTERNAL IMPORT
 import style from "./TokenList.module.css";
 
-const TokenList = ({ tokenData, setOpenTokenBox, openTokenBox }) => {
+const TokenList = ({
+  tokenData,
+  setOpenTokenBox,
+  openTokenBox,
+  showTokenBoxHandler,
+}) => {
   const data = [1, 2, 3, 4, 5, 6, 7];
 
   return (
-    <div className={openTokenBox ? `${style.tokenList} ${style.show}` : `${style.tokenList} ${style.hide}`}>
-      <p
-        className={style.tokenList_close}
-        onClick={() => setOpenTokenBox(false)}
-      >
-        <GrFormClose className={style.tokenList_close_icon} />
-      </p>
+    <div
+      className={
+        openTokenBox
+          ? `${style.tokenList} ${style.show}`
+          : `${style.tokenList} ${style.hide}`
+      }
+    >
+      <GrFormClose
+        className={style.tokenList_close_icon}
+        onClick={() => showTokenBoxHandler()}
+      />
 
       <div className={style.tokenList_title}>
         <h2>Your Token List</h2>

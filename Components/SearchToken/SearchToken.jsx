@@ -18,35 +18,35 @@ const SearchToken = ({ openToken, tokens, tokesData }) => {
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "DAI",
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "DOG",
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "SHIB",
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "TRX",
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "BTC",
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "CHN",
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "SOL",
     },
     {
       img: <FaEthereum />,
-      name: "ETH",
+      name: "POL",
     },
   ];
 
@@ -74,6 +74,7 @@ const SearchToken = ({ openToken, tokens, tokesData }) => {
               onClick={() => {
                 setActive(index + 1);
                 tokens({ name: item.name, img: item.img });
+                openToken(false);
               }}
             >
               {item.img}
