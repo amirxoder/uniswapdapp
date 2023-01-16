@@ -41,7 +41,7 @@ const Token = ({ openSetting, setOpenSetting }) => {
 
         <div className={style.token_box_toggle}>
           <p className={style.token_box_para}>Transaction Deadline</p>
-          <Toggle />
+          <Toggle label={"No"} />
         </div>
       </div>
     </div>

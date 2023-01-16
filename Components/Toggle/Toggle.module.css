@@ -1,0 +1,41 @@
+.toggle_label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.toggle_checkbox {
+  display: none;
+}
+
+.toggle_inner {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5rem;
+}
+
+.toggle_inner::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle_checkbox:checked + .toggle_inner {
+  background-color: #cff80b;
+}
+
+.toggle_checkbox:checked + .toggle_inner::before {
+  transform: translateX(15px);
+}
